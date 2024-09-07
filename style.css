@@ -9,16 +9,17 @@
 }
 body{
     display: grid;
-    grid-template-columns: 240px , 1fr;
-    grid-template-rows: 56px , 1fr;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 56px 1fr;
     grid-template-areas: 
-'header header'
-'sidebar container';
+    'header  header'
+    'sidebar container';
 height: 100vh;
 }
 
 h1{
     font-size: 0.9rem;
+    color: #fff;
 }
 h4{
     font-size: 0.9rem;
@@ -182,6 +183,31 @@ cursor: pointer;
 .cam:hover, .noti:hover{
     border-radius: 50%;
     background-color: #313131;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: #212121;
+    padding-top: 10px;
 
-
+}
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-item{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+.sidebar-item:hover{
+    background-color: #4c4c4c;
+    transition: 0.5s;
+}
+.more{
+    margin-bottom: 10px;
 }
